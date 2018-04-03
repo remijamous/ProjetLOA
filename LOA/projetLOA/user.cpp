@@ -2,6 +2,7 @@
 
 User::User(QString nameParam, QString surnameParam, QString emailParam): Person(nameParam,surnameParam),email(emailParam),canBorrow(true)
 {
+
 }
 /*
 User::~User()
