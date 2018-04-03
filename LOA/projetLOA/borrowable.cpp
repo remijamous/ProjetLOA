@@ -5,23 +5,36 @@
 
 #include "borrowable.h"
 
+int Borrowable::getId() const
+{
+    return id;
+}
+
+void Borrowable::setId(int value)
+{
+    id = value;
+}
+
 Borrowable::Borrowable() {
+    this->id = -1;
     this->setName(QString("Undefined"));
     this->setIsBorrowable(false);
     this->borrowDate = *(new QList<tuple<QDate,QDate,User>>);
 }
 
-Borrowable::Borrowable(const QString name)
+Borrowable::Borrowable(const int id, const QString name)
 {
+    this->id = id;
     this->setName(name);
     this->setIsBorrowable(true);
     this->borrowDate = *(new QList<tuple<QDate,QDate,User>>);
 }
 
 
-Borrowable::Borrowable(const QString name, bool isBorrowable,
+Borrowable::Borrowable(const int id, const QString name, bool isBorrowable,
                        const QList<tuple<QDate, QDate, User> > &borrowDate)
 {
+    this->id = id;
     this->setName(name);
     this->setIsBorrowable(isBorrowable);
     this->setBorrowDate(borrowDate);

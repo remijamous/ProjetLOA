@@ -86,7 +86,7 @@
     <item>
      <widget class="QStackedWidget" name="MainActionArea">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="MainMenu">
        <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -219,7 +219,7 @@ version 1.0</string>
                    </size>
                   </property>
                   <property name="text">
-                   <string>Research Area</string>
+                   <string>Zone de recherche</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignHCenter|Qt::AlignTop</set>

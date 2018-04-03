@@ -13,14 +13,16 @@ using namespace std;
 class Borrowable
 {
     private:
+        int id;
         QString name;
         bool isBorrowable;
         QList<tuple<QDate,QDate,User>> borrowDate;
 
     public:
         Borrowable();
-        Borrowable(const QString);
-        Borrowable(const QString name, bool isBorrowable, const QList<tuple<QDate, QDate, User> > &borrowDate);
+        Borrowable(const int id, const QString name);
+        Borrowable(const int id, const QString name,
+                   bool isBorrowable, const QList<tuple<QDate, QDate, User> > &borrowDate);
 
         QString getName() const;
         void setName(const QString &value);
@@ -28,6 +30,8 @@ class Borrowable
         void setIsBorrowable(bool value);
         QList<tuple<QDate, QDate, User> > getBorrowDate() const;
         void setBorrowDate(const QList<tuple<QDate, QDate, User> > &value);
+        int getId() const;
+        void setId(int value);
 };
 
 #endif // BORROWABLE_H

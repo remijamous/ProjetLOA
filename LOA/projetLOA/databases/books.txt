@@ -1,0 +1,1 @@
+id, [borrowDates], name, isBorrowable, borrowableType, 

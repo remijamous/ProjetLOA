@@ -1,0 +1,15 @@
+1-> Books
+2-> DVD
+3-> CD
+[4-9] -> Wut?
+
+[Typeid][code.]
+=> 141 => 41ème livre
+=> 211 => 11ème DVD
+
+
+[Forme livre]
+id, [borrowDates], name, isBorrowable, author, [BOOKTYPES], pages \n
+
+[Forme DVD]
+id, [borrowDates], name, isBorrowable, producter, [Actors], [DVDSTYLE], duration \n 

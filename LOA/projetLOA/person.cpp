@@ -1,15 +1,19 @@
 #include "person.h"
 
+Person::Person() {
+    this->surname = QString("Undefined_surname");
+    this->name = QString("Undefined_name");
+}
 
 Person::Person(QString name, QString surname)
 {
     this->surname = surname;
     this->name = name;
 }
+
 Person::~Person()
 {
-    free(&this->name);
-    free(&this->surname);
+
 }
 
 QString Person::getSurname() const

@@ -31,7 +31,8 @@ SOURCES += \
     user.cpp \
     group.cpp \
     book.cpp \
-    borrowable.cpp
+    borrowable.cpp \
+    dvd.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -40,7 +41,8 @@ HEADERS += \
     user.h \
     group.h \
     book.h \
-    borrowable.h
+    borrowable.h \
+    dvd.h
 
 FORMS += \
         mainwindow.ui

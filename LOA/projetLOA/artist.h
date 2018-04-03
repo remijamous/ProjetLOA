@@ -3,10 +3,10 @@
 
 #include "person.h"
 
-class Artist : public Person
-{
-public:
-
+class Artist : public Person {
+    public:
+        Artist();
+        Artist(QString name, QString surname);
 };
 
 #endif // ARTIST_H

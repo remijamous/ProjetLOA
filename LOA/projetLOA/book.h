@@ -6,7 +6,7 @@
 #include "borrowable.h"
 #include "artist.h"
 
-enum class BookType {
+enum class BOOKTYPE {
     ADVENTURE,
     DRAMA,
     HORROR,
@@ -18,12 +18,19 @@ enum class BookType {
 class Book : public Borrowable
 {
     private:
-        // Artist author;
-        QList<int> bookType;
+        Artist author;
+        QList<BOOKTYPE> bookType;
         int pages;
 
     public:
-        Book();
+        Book(const int id, const QString name, const Artist author,
+             const QList<BOOKTYPE> bookType, const int pages);
+        Artist getAuthor() const;
+        void setAuthor(const Artist &value);
+        QList<BOOKTYPE> getBookType() const;
+        void setBookType(const QList<BOOKTYPE> &value);
+        int getPages() const;
+        void setPages(int value);
 };
 
 #endif // BOOK_H

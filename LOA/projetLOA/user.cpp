@@ -1,16 +1,15 @@
 #include "user.h"
 
-User::User(QString nameParam, QString surnameParam, QString emailParam): Person(nameParam,surnameParam),email(emailParam),canBorrow(true)
+User::User(QString name, QString surname, QString email): Person(name, surname)
+{
+    this->canBorrow = true;
+    this->email = email;
+}
+
+User::~User()
 {
 
 }
-/*
-User::~User()
-{
-    ~Personne();
-    free(email);
-    free(canBorrow);
-}*/
 
 bool User::getCanBorrow() const
 {
