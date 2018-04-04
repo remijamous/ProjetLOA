@@ -6,6 +6,8 @@
 #include "book.h"
 #include "user.h"
 #include "artist.h"
+#include "person.h"
+#include "datamanager.h"
 
 /* MAIN WINDOW INITIALISATION AND DESTROYER */
 MainWindow::MainWindow(QWidget *parent) :
@@ -14,7 +16,9 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    /* DEBUG SECTION */
+    DataManager database = DataManager();
+    database.constructBookDatabaseMockUp();
+    qDebug() << database.getBookDataBase().value(1).getName();
 }
 
 MainWindow::~MainWindow()
@@ -24,14 +28,16 @@ MainWindow::~MainWindow()
 
 
 /* LEFT DOCK FUNCTIONS */
-void MainWindow::on_InventoryHubQuickAccess_clicked()
-{
-    ui->MainActionArea->setCurrentIndex(1);
-}
 
-void MainWindow::on_MainMenuQuickAccess_clicked()
+void MainWindow::on_actionMainMenuQuickAccess_triggered()
 {
     ui->MainActionArea->setCurrentIndex(0);
 }
 
+void MainWindow::on_actionInventoryHubQuickAccess_triggered()
+{
+    ui->MainActionArea->setCurrentIndex(1);
+}
+
 /* Inventory Hub Functions */
+

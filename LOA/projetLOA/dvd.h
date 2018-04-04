@@ -18,9 +18,8 @@ class Dvd : public Borrowable {
         DVDSTYLE dvdStyle;
         int duration;
 
-    public;
-        Dvd(const int id, const QString name, const Artist producer,
-            const QList<Artist> actors, const DVDSTYLE dvdStyle, const int duration);
+    public:
+        Dvd(const int id, const QString name, const Artist producer, const QList<Artist> actors, const DVDSTYLE dvdStyle, const int duration);
 
         Artist getProducer() const;
         void setProducer(const Artist &value);
@@ -30,6 +29,6 @@ class Dvd : public Borrowable {
         void setDvdStyle(const DVDSTYLE &value);
         int getDuration() const;
         void setDuration(int value);
-}
+};
 
 #endif // DVD_H

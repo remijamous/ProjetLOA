@@ -16,9 +16,8 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_InventoryHubQuickAccess_clicked();
-
-    void on_MainMenuQuickAccess_clicked();
+    void on_actionMainMenuQuickAccess_triggered();
+    void on_actionInventoryHubQuickAccess_triggered();
 
 private:
     Ui::MainWindow *ui;

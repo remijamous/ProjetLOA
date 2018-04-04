@@ -23,6 +23,7 @@ class Book : public Borrowable
         int pages;
 
     public:
+        Book();
         Book(const int id, const QString name, const Artist author,
              const QList<BOOKTYPE> bookType, const int pages);
         Artist getAuthor() const;

@@ -3,7 +3,7 @@
 Dvd::Dvd(const int id, const QString name, const Artist producer,
          const QList<Artist> actors, const DVDSTYLE dvdStyle,
          const int duration) : Borrowable(id, name) {
-    this-producer = producer;
+    this->producer = producer;
     this->actors = actors;
     this->dvdStyle = dvdStyle;
     this->duration = duration;

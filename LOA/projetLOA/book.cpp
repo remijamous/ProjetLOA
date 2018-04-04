@@ -1,5 +1,10 @@
 #include "book.h"
 
+Book::Book() : Borrowable() {
+    this->author = Artist("Undefined", "Undefined");
+    this->bookType = QList<BOOKTYPE>() << BOOKTYPE::MISC;
+    this->pages = -1;
+}
 
 Book::Book(const int id, const QString name, const Artist author,
            const QList<BOOKTYPE> bookTypes, const int pages) : Borrowable(id, name) {
