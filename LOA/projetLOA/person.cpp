@@ -35,3 +35,7 @@ void Person::setName(const QString &value)
 {
     name = value;
 }
+
+QString Person::getFullName() const {
+    return getName() + QString(" ") + getSurname();
+}

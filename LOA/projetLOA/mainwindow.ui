@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
-    <height>522</height>
+    <width>1061</width>
+    <height>628</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -94,16 +94,16 @@ version 1.0</string>
        </layout>
       </widget>
       <widget class="QWidget" name="InventoryHub">
-       <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <layout class="QVBoxLayout" name="verticalLayout">
         <item>
-         <widget class="QWidget" name="LeftSide" native="true">
-          <property name="maximumSize">
+         <widget class="QWidget" name="TopSide" native="true">
+          <property name="minimumSize">
            <size>
-            <width>300</width>
-            <height>16777215</height>
+            <width>0</width>
+            <height>275</height>
            </size>
           </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
            <property name="spacing">
             <number>0</number>
            </property>
@@ -120,185 +120,35 @@ version 1.0</string>
             <number>0</number>
            </property>
            <item>
-            <layout class="QVBoxLayout" name="LeftSideLayout">
+            <layout class="QVBoxLayout" name="TopSideLayout">
              <item>
-              <widget class="QFrame" name="ResearchFilters">
+              <widget class="QTableView" name="BookTableView">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
-                 <height>325</height>
+                 <height>250</height>
                 </size>
                </property>
-               <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
-               </property>
-               <property name="lineWidth">
-                <number>20</number>
-               </property>
-               <property name="midLineWidth">
-                <number>20</number>
-               </property>
-               <layout class="QVBoxLayout" name="verticalLayout_4">
-                <item>
-                 <widget class="QTableView" name="tableView">
-                  <property name="minimumSize">
-                   <size>
-                    <width>250</width>
-                    <height>0</height>
-                   </size>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLabel" name="ResearchAreaTitle">
-                  <property name="enabled">
-                   <bool>true</bool>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>16777215</width>
-                    <height>25</height>
-                   </size>
-                  </property>
-                  <property name="text">
-                   <string>Zone de recherche</string>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignHCenter|Qt::AlignTop</set>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLineEdit" name="ResearchField">
-                  <property name="enabled">
-                   <bool>false</bool>
-                  </property>
-                  <property name="placeholderText">
-                   <string>Rechercher...</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <layout class="QGridLayout" name="ResearchFiltersGrid">
-                  <item row="0" column="0">
-                   <widget class="QCheckBox" name="BookRCheckbox">
-                    <property name="enabled">
-                     <bool>false</bool>
-                    </property>
-                    <property name="text">
-                     <string>Books</string>
-                    </property>
-                    <property name="tristate">
-                     <bool>false</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="0">
-                   <widget class="QCheckBox" name="DVDRCheckbox">
-                    <property name="enabled">
-                     <bool>false</bool>
-                    </property>
-                    <property name="text">
-                     <string>DVD</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="2" column="0">
-                   <widget class="QCheckBox" name="checkBox">
-                    <property name="enabled">
-                     <bool>false</bool>
-                    </property>
-                    <property name="text">
-                     <string>CD</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </item>
-               </layout>
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="CreateItemButton">
-               <property name="enabled">
-                <bool>false</bool>
+              <layout class="QHBoxLayout" name="ItemButtons">
+               <property name="spacing">
+                <number>10</number>
                </property>
-               <property name="text">
-                <string>Nouvel objet...</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
-         <widget class="QWidget" name="RightSide" native="true">
-          <property name="minimumSize">
-           <size>
-            <width>400</width>
-            <height>0</height>
-           </size>
-          </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_7">
-           <property name="spacing">
-            <number>0</number>
-           </property>
-           <property name="leftMargin">
-            <number>0</number>
-           </property>
-           <property name="topMargin">
-            <number>0</number>
-           </property>
-           <property name="rightMargin">
-            <number>0</number>
-           </property>
-           <property name="bottomMargin">
-            <number>0</number>
-           </property>
-           <item>
-            <layout class="QVBoxLayout" name="RightSideLayout">
-             <property name="spacing">
-              <number>8</number>
-             </property>
-             <item>
-              <layout class="QVBoxLayout" name="SelectedItem">
                <item>
-                <widget class="QLabel" name="ItemDataTitle">
-                 <property name="maximumSize">
+                <widget class="QPushButton" name="CreateItemButton">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="minimumSize">
                   <size>
-                   <width>16777215</width>
+                   <width>0</width>
                    <height>25</height>
                   </size>
                  </property>
                  <property name="text">
-                  <string>Objet Selectionné</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignHCenter|Qt::AlignTop</set>
-                 </property>
-                 <property name="margin">
-                  <number>6</number>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLabel" name="ItemData">
-                 <property name="text">
-                  <string>Data
-About
-The
-Item</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-                 </property>
-                 <property name="margin">
-                  <number>15</number>
+                  <string>Nouvel objet</string>
                  </property>
                 </widget>
                </item>
@@ -307,91 +157,223 @@ Item</string>
                  <property name="enabled">
                   <bool>false</bool>
                  </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>25</height>
+                  </size>
+                 </property>
                  <property name="text">
-                  <string>Supprimer l'objet</string>
+                  <string>Supprimer objet</string>
                  </property>
                 </widget>
                </item>
               </layout>
              </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="Line" name="InventorHubSeparator">
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <property name="lineWidth">
+           <number>4</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="BottomSide" native="true">
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="BottomSideLayout">
              <item>
-              <widget class="Line" name="RightSideLayoutSeparator">
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>5</height>
-                </size>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Sunken</enum>
-               </property>
-               <property name="lineWidth">
-                <number>5</number>
-               </property>
-               <property name="midLineWidth">
-                <number>5</number>
-               </property>
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-              </widget>
+              <layout class="QVBoxLayout" name="LeftSideLayout">
+               <item>
+                <widget class="QFrame" name="ResearchFilters">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <property name="lineWidth">
+                  <number>20</number>
+                 </property>
+                 <property name="midLineWidth">
+                  <number>20</number>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_4">
+                  <property name="spacing">
+                   <number>0</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <widget class="QLabel" name="ResearchAreaTitle">
+                    <property name="enabled">
+                     <bool>true</bool>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>25</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>Zone de recherche</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLineEdit" name="ResearchField">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
+                    <property name="placeholderText">
+                     <string>Rechercher...</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QGridLayout" name="ResearchFiltersGrid">
+                    <item row="0" column="0">
+                     <widget class="QCheckBox" name="BookRCheckbox">
+                      <property name="enabled">
+                       <bool>false</bool>
+                      </property>
+                      <property name="text">
+                       <string>Books</string>
+                      </property>
+                      <property name="tristate">
+                       <bool>false</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QCheckBox" name="DVDRCheckbox">
+                      <property name="enabled">
+                       <bool>false</bool>
+                      </property>
+                      <property name="text">
+                       <string>DVD</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="0">
+                     <widget class="QCheckBox" name="checkBox">
+                      <property name="enabled">
+                       <bool>false</bool>
+                      </property>
+                      <property name="text">
+                       <string>CD</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
              </item>
              <item>
-              <layout class="QVBoxLayout" name="CalendarArea">
+              <layout class="QVBoxLayout" name="RightSideLayout">
+               <property name="spacing">
+                <number>8</number>
+               </property>
                <item>
-                <widget class="QCalendarWidget" name="Calendar"/>
-               </item>
-               <item>
-                <layout class="QHBoxLayout" name="ReservationEndArea">
+                <layout class="QVBoxLayout" name="CalendarArea">
                  <item>
-                  <widget class="QLabel" name="ReservationDateLabel">
-                   <property name="text">
-                    <string>Date d'emprunt</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
+                  <widget class="QCalendarWidget" name="Calendar"/>
                  </item>
                  <item>
-                  <widget class="QDateTimeEdit" name="ReservationDate">
+                  <layout class="QHBoxLayout" name="ReservationEndArea">
+                   <item>
+                    <widget class="QLabel" name="ReservationDateLabel">
+                     <property name="text">
+                      <string>Date d'emprunt</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QDateTimeEdit" name="ReservationDate">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="ReservationBeginArea">
+                   <item>
+                    <widget class="QLabel" name="ReservationEndDateLabel">
+                     <property name="text">
+                      <string>Date de retour</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QDateTimeEdit" name="ReservationEndDate">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="MakeReservation">
                    <property name="enabled">
                     <bool>false</bool>
+                   </property>
+                   <property name="text">
+                    <string>Faire une réservation</string>
                    </property>
                   </widget>
                  </item>
                 </layout>
-               </item>
-               <item>
-                <layout class="QHBoxLayout" name="ReservationBeginArea">
-                 <item>
-                  <widget class="QLabel" name="ReservationEndDateLabel">
-                   <property name="text">
-                    <string>Date de retour</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QDateTimeEdit" name="ReservationEndDate">
-                   <property name="enabled">
-                    <bool>false</bool>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </item>
-               <item>
-                <widget class="QPushButton" name="MakeReservation">
-                 <property name="enabled">
-                  <bool>false</bool>
-                 </property>
-                 <property name="text">
-                  <string>Faire une réservation</string>
-                 </property>
-                </widget>
                </item>
               </layout>
              </item>
@@ -411,7 +393,7 @@ Item</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1000</width>
+     <width>1061</width>
      <height>20</height>
     </rect>
    </property>
@@ -437,7 +419,7 @@ Item</string>
     <enum>LeftToolBarArea</enum>
    </attribute>
    <attribute name="toolBarBreak">
-    <bool>true</bool>
+    <bool>false</bool>
    </attribute>
    <addaction name="actionMainMenuQuickAccess"/>
    <addaction name="actionInventoryHubQuickAccess"/>

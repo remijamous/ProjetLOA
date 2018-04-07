@@ -19,6 +19,8 @@ class Person
 
         QString getSurname() const;
         void setSurname(const QString &value);
+
+        QString getFullName() const;
 };
 
 #endif // PERSON_H

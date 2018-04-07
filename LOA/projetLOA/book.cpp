@@ -22,6 +22,37 @@ QList<BOOKTYPE> Book::getBookType() const
     return bookType;
 }
 
+
+/*
+QStringList Book::getBookTypeAsQString() const {
+    QStringList result;
+    QList<BOOKTYPE>::const_iterator it;
+
+    for(it = bookType.cbegin(); it != bookType.cend; it++) {
+        BOOKTYPE tmp = *it;
+        switch(tmp) {
+            case BOOKTYPE::ADVENTURE:
+                result.append(QString("Aventure"));
+                break;
+            case BOOKTYPE::DRAMA:
+                result.append(QString("Drame"));
+                break;
+            case BOOKTYPE::HORROR:
+                result.append(QString("Horreur"));
+                break;
+            case BOOKTYPE::SCIENCE:
+                result.append(QString("Sciences"));
+                break;
+            case BOOKTYPE::MISC:
+                result.append(QString("Autre"));
+                break;
+            default:
+                break;
+        }
+    }
+    return result;
+}
+*/
 void Book::setBookType(const QList<BOOKTYPE> &value)
 {
     bookType = value;

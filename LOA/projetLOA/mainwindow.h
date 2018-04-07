@@ -2,6 +2,12 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QtCore>
+#include <QtGui>
+
+#include <QTableWidgetItem>
+
+#include "datamanager.h"
 
 namespace Ui {
 class MainWindow;
@@ -20,7 +26,13 @@ private slots:
     void on_actionInventoryHubQuickAccess_triggered();
 
 private:
+    DataManager database;
+
     Ui::MainWindow *ui;
+    QStandardItemModel *inventoryBookModel;
+
+    // Initialization functions
+    void fillInventoryHubTableView();
 };
 
 #endif // MAINWINDOW_H

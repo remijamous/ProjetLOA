@@ -9,7 +9,6 @@
 
 #include "datamanager.h"
 #include "book.h"
-#include "dvd.h"
 #include "artist.h"
 
 /* COMMON READER METHODS */
@@ -24,19 +23,12 @@ DataManager::BookReader::BookReader() {}
 
 DataManager::BookReader::~BookReader() {}
 
-/* DVD READER AREA */
-
-DataManager::DVDReader::DVDReader() {}
-
-DataManager::DVDReader::~DVDReader() {}
-
 
 /* DATA MANAGER AREA */
 
 DataManager::DataManager()
 {
     this->bookReader = BookReader();
-    this->dvdReader = DVDReader();
 }
 
 DataManager::~DataManager() {}
@@ -87,11 +79,11 @@ void DataManager::constructDatabase() {
 /* A mockup database for books. */
 void DataManager::constructBookDatabaseMockUp() {
     // BOOK CREATION
-    Book leFeu = Book(11, "Le Feu", Artist("Henry", "Barbusse"), QList<BOOKTYPE>() << BOOKTYPE::MISC, 325);
-    Book prinMaths = Book(12, "Principae Mathematics", Artist("Isaac", "Newton"), QList<BOOKTYPE>() << BOOKTYPE::SCIENCE, 650);
-    Book hobbit = Book(13, "Le Hobbit", Artist("J.R.R", "Tolkien"), QList<BOOKTYPE>() << BOOKTYPE::ADVENTURE, 900);
+    Book leFeu = Book(1, "Le Feu", Artist("Henry", "Barbusse"), QList<BOOKTYPE>() << BOOKTYPE::MISC, 325);
+    Book prinMaths = Book(2, "Principae Mathematics", Artist("Isaac", "Newton"), QList<BOOKTYPE>() << BOOKTYPE::SCIENCE, 650);
+    Book hobbit = Book(3, "Le Hobbit", Artist("J.R.R", "Tolkien"), QList<BOOKTYPE>() << BOOKTYPE::ADVENTURE, 900);
 
-    QMap<int, Book> bookData = QMap<int, Book>();
+    QMap<int, Book> bookData;
     bookData.insert(1, leFeu);
     bookData.insert(2, prinMaths);
     bookData.insert(3, hobbit);
@@ -110,17 +102,6 @@ void DataManager::setBookReader(const BookReader &value)
 {
     bookReader = value;
 }
-
-DataManager::DVDReader DataManager::getDVDReader() const
-{
-    return dvdReader;
-}
-
-void DataManager::setDVDReader(const DVDReader &value)
-{
-    dvdReader = value;
-}
-
 
 QMap<int, Book> DataManager::getBookDataBase() const
 {

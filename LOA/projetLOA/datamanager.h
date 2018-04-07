@@ -6,7 +6,6 @@
 #include <QMap>
 
 #include "book.h"
-#include "dvd.h"
 #include "artist.h"
 
 class DataManager{
@@ -19,17 +18,8 @@ class DataManager{
                 Book interpretQStringData(QString data);
         };
 
-        // Nested class to read DVD entries.
-        class DVDReader {
-            public:
-                DVDReader();
-                ~DVDReader();
-                Dvd interpretQStringData(QString data);
-        };
-
         // Fields of the DataManager.
         BookReader bookReader;
-        DVDReader dvdReader;
 
         QMap<int, Book> bookDataBase;
 
@@ -44,8 +34,6 @@ class DataManager{
         // Setters and Getters
         BookReader getBookReader() const;
         void setBookReader(const BookReader &value);
-        DVDReader getDVDReader() const;
-        void setDVDReader(const DVDReader &value);
         QMap<int, Book> getBookDataBase() const;
         void setBookDataBase(const QMap<int, Book> &value);
 };
