@@ -42,7 +42,6 @@ void MainWindow::on_actionInventoryHubQuickAccess_triggered()
 
 /* Inventory Hub Functions */
 
-
 void MainWindow::fillInventoryHubTableView() {
     // InventoryHub Tableview
     int databaseSize = database.getBookDataBase().size();
@@ -57,6 +56,13 @@ void MainWindow::fillInventoryHubTableView() {
 
     // The condition takes a <= to show all the element in the table.
     for(int row = 0; row <= databaseSize; row++) {
+        Book currentBook = database.getBookDataBase().value(row);
+        QString concatenedBookTypes = QString();
+        QStringList currBookTypes = currentBook.getBookTypeAsQStringList();
+        for(QStringList::const_iterator it = currBookTypes.cbegin(); it != currBookTypes.cend(); it++) {
+            concatenedBookTypes += *(it) + QString(" ");
+        }
+
         for(int col = 0; col < 6; col++) {
             /* The row - 1 allows to not take a Book created as empty.
              * if anyone finds out why, I'd love to know what happened here.
@@ -67,22 +73,23 @@ void MainWindow::fillInventoryHubTableView() {
             // The data we use depends on the column for the book.
             switch(col) {
                 case 0:
-                    inventoryBookModel->setData(index, database.getBookDataBase().value(row).getId());
+                    inventoryBookModel->setData(index, currentBook.getId());
                     break;
                 case 1:
-                    inventoryBookModel->setData(index,
-                                               (database.getBookDataBase().value(row).getIsBorrowable())
-                                                    ? "Oui" : "Non");
+                    inventoryBookModel->setData(index,(currentBook.getIsBorrowable()) ? "Oui" : "Non");
                     break;
                 case 2:
-                    inventoryBookModel->setData(index, database.getBookDataBase().value(row).getName());
+                    inventoryBookModel->setData(index, currentBook.getName());
                     break;
                 case 3:
-                    inventoryBookModel->setData(index, database.getBookDataBase().value(row).getAuthor().getFullName());
+                    inventoryBookModel->setData(index, currentBook.getAuthor().getFullName());
+                    break;
                 case 4:
+                    inventoryBookModel->setData(index, concatenedBookTypes);
                     break;
                 case 5:
-                    inventoryBookModel->setData(index, database.getBookDataBase().value(row).getPages());
+                    inventoryBookModel->setData(index, currentBook.getPages());
+                    break;
                 default:
                     break;
             }

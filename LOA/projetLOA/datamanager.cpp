@@ -81,7 +81,7 @@ void DataManager::constructBookDatabaseMockUp() {
     // BOOK CREATION
     Book leFeu = Book(1, "Le Feu", Artist("Henry", "Barbusse"), QList<BOOKTYPE>() << BOOKTYPE::MISC, 325);
     Book prinMaths = Book(2, "Principae Mathematics", Artist("Isaac", "Newton"), QList<BOOKTYPE>() << BOOKTYPE::SCIENCE, 650);
-    Book hobbit = Book(3, "Le Hobbit", Artist("J.R.R", "Tolkien"), QList<BOOKTYPE>() << BOOKTYPE::ADVENTURE, 900);
+    Book hobbit = Book(3, "Le Hobbit", Artist("J.R.R", "Tolkien"), QList<BOOKTYPE>() << BOOKTYPE::ADVENTURE << BOOKTYPE::HORROR, 900);
 
     QMap<int, Book> bookData;
     bookData.insert(1, leFeu);

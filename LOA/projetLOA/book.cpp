@@ -48,12 +48,10 @@ Book::Book(const int id, const QString name, const Artist author,
  * @brief getBookTypeAsQString
  * @return all the book's type as a QStringList.
  */
-/*
-QStringList Book::getBookTypeAsQString() const {
+QStringList Book::getBookTypeAsQStringList() const {
     QStringList result;
-    QList<BOOKTYPE>::const_iterator it;
 
-    for(it = bookType.cbegin(); it != bookType.cend; it++) {
+    for(QList<BOOKTYPE>::const_iterator it = bookType.cbegin(); it != bookType.cend(); it++) {
         BOOKTYPE tmp = *it;
         switch(tmp) {
             case BOOKTYPE::ADVENTURE:
@@ -77,7 +75,6 @@ QStringList Book::getBookTypeAsQString() const {
     }
     return result;
 }
-*/
 
 
 /* BELOW THIS BREAK, ACCESSORS.

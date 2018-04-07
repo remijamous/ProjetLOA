@@ -87,7 +87,7 @@ class Book : public Borrowable
          * @brief getBookTypeAsQString
          * @return all the book's type as a QStringList.
          */
-        // QStringList getBookTypeAsQString() const;
+        QStringList getBookTypeAsQStringList() const;
 
 
         /* BELOW THIS BREAK, ACCESSORS.
